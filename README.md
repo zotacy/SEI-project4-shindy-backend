@@ -1,4 +1,4 @@
-## Deere Project 4 Starter Code
+## Deere Project 4 Starter Code- "Shindy"
 
 This app serves JSON data only. There are no views. You'll build a React app to communicate with this Express app. Since there are no views, you'll want to use Postman to test that your endpoints are working before writing the React code.
 
@@ -8,6 +8,7 @@ Note - this app has no views and each endpoint is prefaced with `/api`.
 // server.js
 app.use("/api/auth", require("./controllers/authController.js"));
 app.use("/api/users", require("./controllers/usersController.js"));
+app.use("/api/chars", require("./controllers/charsController.js"));
 ```
 
 ## Set Up
@@ -18,13 +19,14 @@ app.use("/api/users", require("./controllers/usersController.js"));
 
    ```bash
    PORT=3000
-   JWT_SECRET=pancakes
+   JWT_SECRET=shindy
    ```
 
-1. Check out your `config/config.json` file. You'll need to create a database called `project4_development` (or feel free to rename the database) in pgAdmin or from any directory in the Terminal:
+1. Check out your `config/config.json` file. 
+   PostGreSQL database: `shindy` in pgAdmin or from any directory in the Terminal:
 
    ```
-   createdb project4_development
+   createdb shindy
    ```
 
 1. Sequelize is included in the app. You have a `User` model. Run `npx sequelize db:migrate` to create the `Users` table in your database.
@@ -66,10 +68,3 @@ You have the following routes available.
 
 <br>
 
-## Additional Resources
-
-- [Sequelize Docs](https://sequelize.org/master/)
-- [Fruit App Solution](https://git.generalassemb.ly/jdr-0622/fruit-app-in-class)
-- [Pokemon Express Solution](https://git.generalassemb.ly/jdr-0622/pokemon-express-sequelize6)
-- [Google Routes Spreadsheet](https://docs.google.com/spreadsheets/d/14-LHKXLtEkp_vKEz3qSKjREnrmSyzQ9fimTlmrPsZsQ/edit#gid=0)
-- [JSON Web Tokens](https://jwt.io/)
