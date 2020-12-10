@@ -49,6 +49,7 @@ router.post("/signup", (req, res) => {
 
 // POST LOGIN
 router.post("/login", (req, res) => {
+  console.log(req.body)
   UserModel.findOne({
     where: {
       username: req.body.username,

@@ -5,21 +5,22 @@ const UserModel = require("../models").User;
 const CharacterModel = require("../models").Character;
 
 // GET CHARACTER INFO
-router.get("/profile/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   let character = await CharacterModel.findByPk(req.params.id, {
-    include: [{ model: UserModel, attributes: ["id", "name"] }],
+    include: [{ model: UserModel, attributes: ["id", "username"] }],
   });
   res.json({ character });
 });
 
-// GET ALL CHARACTERS
+// GET ALL PLAYER CHARACTERS ---------- add to specific players??????
 router.get("/", async (req, res) => {
-  let allCharacters = await CharacterModel.findAll({ include: SongModel });
+  let allCharacters = await CharacterModel.findAll();
   res.json({ allCharacters });
 });
 
 // CREATE A NEW CHARACTER
 router.post("/", async (req, res) => {
+  console.log(req)
   let newCharacter = await CharacterModel.create(req.body);
   res.json({ newCharacter });
 });

@@ -5,14 +5,13 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Character extends Model {
     static associate(models) {
-      Character.belongsTo(models.User, { //Sperate for inital & primary?
-        through: "UserCharacter",
-        foreignKey: "characterId",
-        otherKey: "userId",
+      Character.belongsTo(models.User, {
+        foreignKey: "userId",
       });
     }
   };
   Character.init({
+    userId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     hp: DataTypes.INTEGER,
     attack: DataTypes.INTEGER,
