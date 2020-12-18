@@ -14,7 +14,7 @@ app.use("/api/chars", require("./controllers/charsController.js"));
 Front-end Repo: https://github.com/zotacy/SEI-project4-shindy-frontend
 Front-end Heroku: https://shindyapp.herokuapp.com/shindy
 Back-end Repo: https://github.com/zotacy/SEI-project4-shindy-backend
-Back-end Heroku: https://git.heroku.com/shindy-api.git
+Back-end Heroku: https://shindy-api.herokuapp.com/
 
 ## Set Up
 1. Fork and clone this repo
