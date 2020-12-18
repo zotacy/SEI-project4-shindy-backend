@@ -14,8 +14,8 @@ router.get("/profile/:id", async (req, res) => {
 
 // GET ALL USERS
 router.get("/", async (req, res) => {
-  let users = await UserModel.findAll();
-  res.json({ users });
+  let allUsers = await UserModel.findAll();
+  res.json({ allUsers });
 });
 
 // CREATE A NEW USER
