@@ -23,7 +23,6 @@ app.use("/api/chars", require("./controllers/charsController.js"));
 
    ```bash
    PORT=3000
-   JWT_SECRET=shindy
    ```
 
 4. Check out your `config/config.json` file. 

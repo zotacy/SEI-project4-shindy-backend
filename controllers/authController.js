@@ -36,7 +36,7 @@ router.post("/signup", (req, res) => {
           );
           console.log(token);
           let userId = newUser.id
-          res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
+          // res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
           // res.redirect(`/users/profile/${newUser.id}`);
           res.json({ userId, token });
         })
@@ -71,7 +71,7 @@ router.post("/login", (req, res) => {
           );
           console.log(token);
           userId = foundUser.id
-          res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
+          // res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
           // res.redirect(`/users/profile/${foundUser.id}`);
           res.json({ userId, token }); //changed from token
         } else {
