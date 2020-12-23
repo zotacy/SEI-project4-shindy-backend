@@ -10,11 +10,11 @@ app.use("/api/auth", require("./controllers/authController.js"));
 app.use("/api/users", require("./controllers/usersController.js"));
 app.use("/api/chars", require("./controllers/charsController.js"));
 ```
-## Links to Front-end & Heroku
-Front-end Repo: https://github.com/zotacy/SEI-project4-shindy-frontend
-Front-end Heroku: https://shindyapp.herokuapp.com/shindy
-Back-end Repo: https://github.com/zotacy/SEI-project4-shindy-backend
-Back-end Heroku: https://shindy-api.herokuapp.com/
+## Links: Repos & Heroku
+- Front-end Repo: https://github.com/zotacy/SEI-project4-shindy-frontend
+- Front-end Heroku: https://shindyapp.herokuapp.com/shindy
+- Back-end Repo: https://github.com/zotacy/SEI-project4-shindy-backend
+- Back-end Heroku: https://shindy-api.herokuapp.com/
 
 ## Set Up
 1. Fork and clone this repo
